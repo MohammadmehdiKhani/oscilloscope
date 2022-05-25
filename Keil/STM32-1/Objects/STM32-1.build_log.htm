@@ -1,0 +1,142 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: yasin khani, yasini, LIC=EXJT4-FF1Y7-EVI1R-KJINX-4RU7K-EGXBU
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Behnam\Desktop\Khani\Keil\STM32-1\STM32-1.uvprojx
+Project File Date:  06/23/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f401xe.s...
+compiling system_stm32f4xx.c...
+STM32-1.c(24): warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+double a = 1;
+       ^
+STM32-1.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double a = 1;
+^
+STM32-1.c(25): warning: no previous extern declaration for non-static variable 'b' [-Wmissing-variable-declarations]
+double b = 0;
+       ^
+STM32-1.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+double b = 0;
+^
+STM32-1.c(28): warning: no previous extern declaration for non-static variable 'index' [-Wmissing-variable-declarations]
+uint8_t index = 0;
+        ^
+STM32-1.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t index = 0;
+^
+STM32-1.c(106): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB -> MODER &= ~0x0000FC00;        //Clear pin mode
+                 ~~ ^~~~~~~~~~~
+STM32-1.c(109): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB -> PUPDR &= ~0x00000100;        //Clear pull-up pull-down
+                 ~~ ^~~~~~~~~~~
+STM32-1.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOC -> MODER &= ~0x0000FFFF;        //Clear pin mode
+                 ~~ ^~~~~~~~~~~
+STM32-1.c(164): warning: declaration shadows a variable in the global scope [-Wshadow]
+  uint8_t index = 0;
+          ^
+STM32-1.c(28): note: previous declaration is here
+uint8_t index = 0;
+        ^
+STM32-1.c(241): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+STM32-1.c(299): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  ch1[index] = (ADC1 -> DR >> 4);           //Devided by 16
+             ~  ~~~~~~~~~~~^~~~
+STM32-1.c(307): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  ch2[index] = (ADC1 -> DR >> 4);           //Devided by 16
+             ~  ~~~~~~~~~~~^~~~
+STM32-1.c(291): warning: no previous prototype for function 'TIM5_IRQHandler' [-Wmissing-prototypes]
+void TIM5_IRQHandler(void) 
+     ^
+STM32-1.c(291): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM5_IRQHandler(void) 
+^
+static 
+STM32-1.c(330): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+STM32-1.c(312): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void) 
+     ^
+STM32-1.c(312): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void) 
+^
+static 
+STM32-1.c(26): warning: no previous extern declaration for non-static variable 'ch1' [-Wmissing-variable-declarations]
+uint8_t ch1[128];
+        ^
+STM32-1.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t ch1[128];
+^
+STM32-1.c(27): warning: no previous extern declaration for non-static variable 'ch2' [-Wmissing-variable-declarations]
+uint8_t ch2[128];
+        ^
+STM32-1.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t ch2[128];
+^
+15 warnings generated.
+compiling STM32-1.c...
+linking...
+Program Size: Code=7268 RO-data=620 RW-data=8 ZI-data=1904  
+FromELF: creating hex file...
+".\Objects\STM32-1.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Behnam\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Behnam\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
